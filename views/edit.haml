@@ -1,0 +1,24 @@
+!!! 5
+%html
+  %head
+    %title Final Wiki
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/css/styles.css"}
+  %body
+    .login-area
+      %a.login-link{:href => '/'}view
+      |
+      %a.login-link{:href => '/wiki/history'}history
+      |
+      %a.login-line{:href => '/logout'}logout
+    %br
+    %hr
+    %form{:method => 'post'}
+      %label
+        %div
+        =find_and_preserve do
+          %textarea{:name => 'content'}
+            = %Q{#{locals[:content]}}
+
+      %br
+      %input{:type => 'submit', :value => 'Save'}
+      %br

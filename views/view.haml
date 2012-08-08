@@ -1,0 +1,18 @@
+!!! 5
+%html
+  %head
+    %title Final Wiki
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/css/styles.css"}
+  %body
+    .login-area
+      %a.login-link{:href => "/signed_on/edit/"}edit
+      |
+      %a.login-link{:href => '/wiki/history'}history
+      |
+      %a.login-line{:href => '/logout'}logout
+    %br
+    %hr
+    %form{:method => 'get'}
+      %label
+        %div
+          = %Q{#{locals[:content]}}
