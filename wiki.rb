@@ -251,7 +251,7 @@ post '/signed_on/edit/:page' do
   edited_post.content = params[:content]
   post = Post.first_or_create(:page_url => params[:page])
   post.update(:content => params[:content])
-  redirect "/#{params[:page]}"
+  redirect "/#{params[:page]}", 302
 end
 
 post '/signed_on/edit/' do
